@@ -1,0 +1,170 @@
+.gerais {
+  /*Aqui coloquei a forma de estilo geral que 
+  vai em toda e qualquer tela*/
+  background-color: #4b5e72; 
+  color: #0a0a0a;            
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.nomelib {
+/*Aqui editei o nome que aparecera em todos
+as paginas: Lib Godoy*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; 
+  background-color: #4b5e72; 
+  color: rgb(19, 18, 18); 
+}
+
+.nomelib h1 p {
+  /*Aqui é continuação do anterior*/
+  font-size: 4rem;
+  margin: 0;
+}
+
+
+footer {
+/*Aqui vai o estilo geral do footer 
+que aparentemente vai em todas as telas*/
+
+  background-color: #4b5e72; 
+  padding: 2rem;
+}
+
+footer section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; 
+  justify-content: center;
+}
+
+footer article {
+  background-color: #4b5e72;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+footer article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+footer article img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+footer article h4 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer article:last-of-type {
+  width: 100%;
+  max-width: 500px;
+  background-color: #4b5e72;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+
+
+
+
+
+
+
+
+nav {
+   /*Padronizando os blocos nav's*/
+  background-color:#4b5e72; 
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  color: #000303;
+  background-color: #4b5e72;
+  transform: scale(1.05);
+}
+
+
+
+
+
+.cardsgerais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; 
+  justify-content: center;
+  padding: 2rem;
+  background-color: #4b5e72;
+}
+
+.cardsgerais article {
+
+/*Aqui vai o estilo geral dos meus*/
+  background-color: rgb(158, 156, 156);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 200px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.cardsgerais article:hover {
+  transform: translateY(-5px);
+}
+
+.cardsgerais article img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.cardsgerais article h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.cardsgerais article p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+.listadelivros {
+
+}
