@@ -175,12 +175,12 @@ aqui pra baixo começa adicionar livros*/
   border: 2px dashed #4b5e72;
   padding: 25px 30px;
   border-radius: 12px;
-  background-color: #fffbe6;
+  background-color: #4b5e72;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .adicionarLivros legend {
-  color: #4b5e72;
+  color: #0a0c0e;
   font-size: 20px;
   font-weight: bold;
 }
@@ -201,8 +201,8 @@ aqui pra baixo começa adicionar livros*/
 
 .adicionarLivros button {
   margin-top: 20px;
-  background-color: #4b5e72;
-  color: white;
+  background-color: #718091;
+  color: rgb(8, 8, 8);
   padding: 10px 15px;
   border: none;
   border-radius: 6px;
@@ -210,5 +210,5 @@ aqui pra baixo começa adicionar livros*/
 }
 
 .adicionarLivros button:hover {
-  background-color: #2f3f52;
+  background-color: #4b5e72;
 }
