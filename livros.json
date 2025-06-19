@@ -1,0 +1,7 @@
+[
+  { "id": 1, "titulo": "12 Regras para a vida", "autor": "Jordan B. Peterson","Genero": "Desenvolvimento Pessoal","preco": " R$: 100,00"},
+  { "id": 2, "titulo": "1984", "autor": "Eric Arthur Blair","Genero":"Distopia",  "preco" :" R$: 90,00" },
+  { "id": 3, "titulo": "Como ler livros", "autor": "Mortimer Adler","Genero": "Literatura", "preco":"R$:90,00" },
+  { "id": 4, "titulo": "Análise Técnica explicada","autor":"Martin J.Pring", "Genero":"Mercado Financeiro","preco":" R$: 100,00"},
+  { "id": 5, "titulo": "Além das 12 regras para a vida", "autor":"Jordan B. Peterson","Genero":"Psicologia","preco":" R$: 100,00" }
+]
