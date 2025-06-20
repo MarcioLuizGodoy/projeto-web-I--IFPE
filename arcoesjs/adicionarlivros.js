@@ -1,20 +1,28 @@
+//-------------------------------------------------------------------------------------------------
+//criando funcao importante que sera chamada mais a frente.
 
-//criando funcao importante
-
-function atualizarListaNaTela(lista) {
+//Funcao vai receber uma lista de livro nova já com o novo livro e atualizar a ul lá em baixo
+function atualizarListaNaTela(listaNova) {
+  //linkando html com js com id
   const ul = document.getElementById('atualizarLivros');
-  ul.innerHTML = ''; // limpa a lista antes de renderizar de novo
+  //limpar lista
+  ul.innerHTML = ''; 
 
-  lista.forEach(function(livro) {
+  listaNova.forEach(function(objLivro) {
+    //criando o li no html
     const li = document.createElement('li');
-    li.textContent = `ID: ${livro.Id} | Título: ${livro.Titulo} | Autor: ${livro.Autor}`;
+    //adicionando o llivro na linha li
+    li.textContent = `ID: ${objLivro.Id} | Título: ${objLivro.Titulo} | Autor: ${objLivro.Autor}
+     | Genero: ${objLivro.Genero} |Preco: ${objLivro.Preco} | Quantidade: ${objLivro.Quantidade}`;   
+    //#AQUI FALTA POR MAIS INFORMAÇÕES AO OBJ NOVO
+    //pondo o li dentro da lu no html
     ul.appendChild(li);
   });
 }
+//----------------------------------------------------------------------------------------------------
 
 
-
-//seleciona o formulario pelo id colocado neSSSle
+//seleciona o formulario pelo id colocado nele
 const form = document.getElementById('idadicionarlivrosjs');
 
 //Adicionando evento p quando o form for enviado
@@ -23,6 +31,7 @@ form.addEventListener('submit', function(evento) {
     //impedir a pagina de recarregar
     evento.preventDefault();
 
+    //Pegando do form e pondo em variaveis
 const id = document.getElementById('idLivro').value;
 const titulo = document.getElementById('tituloLivro').value;
 const autor = document.getElementById('autorLivro').value;
@@ -30,27 +39,31 @@ const genero = document.getElementById('generoLivro').value;
 const preco = document.getElementById('precoLivro').value;
 const quantidade = document.getElementById('quantidadeLivro').value;
 
-// Criar novo obj java script com os dados do formulario
+// Criar novo obj java script com os dados do formulario que estavam nas variaveis
   const novoLivro = {
     Id: Number(id),
     Titulo: titulo,
     Autor:autor,
     Genero: genero,
-    Preco: preco,
-    Quantidade: quantidade
+    Preco: Number(preco),
+    Quantidade: Number(quantidade)
   };
 
-  fetch('livros.json')  //obriga navegador a fazer requisicao do json onde esta os htmls
+  //obriga navegador a fazer requisicao do json onde esta os htmls
+  fetch('livros.json')  
 
-  .then(function receberRequisicao(respostaRequisicao) {
+
+  //Recebe a lista de livro da requisição e converte para obj java script valido.
+  .then(function converterParaObjeto(respostaRequisicao) {
     return respostaRequisicao.json();
   })
 
-  .then(function criarNovoObj(lista) {
-    lista.push(novoLivro);
+  //Nesse segundo .then caiu o obj javascript da lista e vai ser adicionado o novo livro criado a partir do form
+  .then(function adicionarNovoLivro(listaNovaDeLivro) {
+    listaNovaDeLivro.push(novoLivro);
     
-
-    atualizarListaNaTela(lista);  //aqui ainda falta implementar a função.
+  //Aqui atualiza a lista de livros com o novo livro que depois vai ser chamada no html(body/main)
+    atualizarListaNaTela(listaNovaDeLivro);  
 
     form.reset();
   })
