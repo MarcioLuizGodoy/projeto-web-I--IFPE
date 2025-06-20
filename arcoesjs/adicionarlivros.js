@@ -13,7 +13,7 @@ function atualizarListaNaTela(listaNova) {
     const li = document.createElement('li');
     //adicionando o llivro na linha li
     li.textContent = `ID: ${objLivro.Id} | Título: ${objLivro.Titulo} | Autor: ${objLivro.Autor}
-     | Genero: ${objLivro.Genero} |Preco: ${objLivro.Preco} | Quantidade: ${objLivro.Quantidade}`;   
+     | Genero: ${objLivro.Genero} | Preco: ${objLivro.Preco} | Quantidade: ${objLivro.Quantidade}`;   
     //#AQUI FALTA POR MAIS INFORMAÇÕES AO OBJ NOVO
     //pondo o li dentro da lu no html
     ul.appendChild(li);
