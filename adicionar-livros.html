@@ -32,44 +32,37 @@
 <main>
     
     <fieldset class="adicionarLivros">
-        <br><br>
-    
-    <form action="SalvarLivro" method="post">
+            
+    <form action="" method="post" id="idadicionarlivrosjs">
 
-
-
-
-   <label for="idLivro"> Id :</label>
-    <input type="text" 
-    id="idLivro"
-    name="idLivro" 
-    placeholder="Olhe o último Id na aba LISTA DE LIVROS
-    e adicione o próximo livro"> <br> 
-
-
+    <label for="idLivro"> Id :</label>
+    <input type="text" id="idLivro" name="idLivro" placeholder="Olhe o último Id na aba LISTA DE LIVROS e adicione o próximo livro"> <br> 
 
     <label for="nomeLivro">Titulo: </label>
-    <input type="text" id="nomeLivro" name="nomeLivro" 
-        placeholder="O nome do seu livro aqui"> <br>
+    <input type="text" id="tituloLivro" name="tituloLivro" placeholder="O nome do seu livro aqui"> <br>
 
     <label for="autorLivro">Autor:</label>
-    <input type="text" id="quantidadeLivro" name="quantidadeLivro" ><br> 
+    <input type="text" id="autorLivro" name="autorLivro" ><br> 
 
     <label for="generoLivro">Genero : </label>
     <input type="text" id="generoLivro" name="generoLivro" > <br>
 
     <label for="precoLivro">Preço : </label>
-    <input type="text" id="precoLivro" name="precoLivro" 
-        placeholder="R$: 00,00"> <br><br>
+    <input type="text" id="precoLivro" name="precoLivro" placeholder="R$: 00,00"> <br><br>
 
     <label for="quantidadeLivro">Quantidade :</label>
     <input type="text" id="quantidadeLivro" name="quantidadeLivro" >
 
-    <button>Adicionar Livro</button>
+    <button type="submit">Adicionar Livro</button>
 
     </form>
 
     </fieldset>
+    
+
+    <div id="mensagem"> Nova Lista: </div>
+    <ul id="atualizarLivros" ></ul>
+    <script src="arcoesjs/adicionarlivros.js"></script>
     
 
 </main>
