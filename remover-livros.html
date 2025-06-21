@@ -33,7 +33,7 @@
 
     <legend>Aqui você remove o livro. Tem certeza?</legend>
 
-    <form action="" method="post">
+    <form action="" method="post" id="idremoverlivrosjs">
             
             <label for="idLivro">Id do Livro:  </label>
             <input type="text" id="idLivro" name="idLivro"> <br> <br>
@@ -42,10 +42,11 @@
             <input type="text" id="nomeLivro" name="nomeLivro"> <br><br>
 
             <button type="submit"> Remover este Livro</button>
-           
     </form>
     </fieldset>
-    <ul id="listaLivros"></ul>
+    <ul id="listaLivrosRemoverJS"></ul>
+    
+    <div id="mensagemRemocao" style="color: green; font-weight: bold; margin-top: 10px";></div>
     <script src="arcoesjs/removerlivro.js"></script>
 </main>
 
