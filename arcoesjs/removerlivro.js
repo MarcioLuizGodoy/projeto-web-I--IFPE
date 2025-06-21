@@ -1,3 +1,5 @@
+
+
 let listaLivros = [];
 
 // Carrega os livros do JSON assim que o script inicia
