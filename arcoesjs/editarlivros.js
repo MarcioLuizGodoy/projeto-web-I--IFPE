@@ -48,7 +48,7 @@ function editarLivroPorId(event){
         objetoJavaScript[i].Genero = novoGenero ;
         objetoJavaScript[i].Preco =  Number(novopreco);
         objetoJavaScript[i].Quantidade =  novaQuantidade;
-        ultimoArray = objetoJavaScript[i];
+        //ultimoArray = objetoJavaScript[i];
         livroEncontrado = true;
         mostrarLivros();
         form.reset();
