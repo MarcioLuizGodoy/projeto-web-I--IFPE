@@ -1,9 +1,7 @@
 
-
 //Primeira parte do codigo
 let ultimoArray = []; 
 let objetoJavaScript;
-
 
 function tratarRespostaDarequisicao(response) {
     if(response.ok == true) {
@@ -20,7 +18,6 @@ function armazenarLivros(responseObjJs) {
 function tratarErro (erro) {
     console.error("Erro na requisição do livros.json" , erro);
 }
-
 
 //Segunda parte do codigo
 //essa função é chamada imediatamento quando o usuario submeter a edição do livro.
@@ -60,8 +57,6 @@ function editarLivroPorId(event){
 
 } 
 
-
-
 //terceira parte do codigo
 // essa função mostrar livros vai ser chamada dentro da função  editar livros
 const ul = document.getElementById('inserirLivrosJS');
@@ -77,7 +72,6 @@ li.textContent = ` Id: ${objetoJavaScript[i].Id}| Título:${objetoJavaScript[i].
     }
 }
 
-
 //Quarta parte do codigo
 function carregarLivros() {
     fetch('livros.json')
@@ -85,6 +79,5 @@ function carregarLivros() {
     .then(armazenarLivros)
     .catch(tratarErro);
 }
-
 
 carregarLivros();
