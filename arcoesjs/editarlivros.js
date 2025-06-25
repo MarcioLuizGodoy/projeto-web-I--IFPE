@@ -1,6 +1,6 @@
 
 //Primeira parte do codigo
-let ultimoArray = []; 
+
 let objetoJavaScript;
 
 function tratarRespostaDarequisicao(response) {
