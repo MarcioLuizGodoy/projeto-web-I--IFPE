@@ -1,37 +1,21 @@
-//-------------------------------------------------------------------------------------------------
-//criando funcao importante que sera chamada mais a frente.
 
-//Funcao vai receber uma lista de livro nova já com o novo livro e atualizar a ul lá em baixo
 function atualizarListaNaTela(listaNova) {
-  //linkando html com js com id
   const ul = document.getElementById('atualizarLivros');
-  //limpar lista
   ul.innerHTML = ''; 
 
   listaNova.forEach(function(objLivro) {
-    //criando o li no html
     const li = document.createElement('li');
-    //adicionando o llivro na linha li
     li.textContent = `ID: ${objLivro.Id} | Título: ${objLivro.Titulo} | Autor: ${objLivro.Autor}
      | Genero: ${objLivro.Genero} | Preco: ${objLivro.Preco} | Quantidade: ${objLivro.Quantidade}`;   
-    //#AQUI FALTA POR MAIS INFORMAÇÕES AO OBJ NOVO
-    //pondo o li dentro da lu no html
     ul.appendChild(li);
   });
 }
-//----------------------------------------------------------------------------------------------------
 
-
-//seleciona o formulario pelo id colocado nele
 const form = document.getElementById('idadicionarlivrosjs');
 
-//Adicionando evento p quando o form for enviado
-
 form.addEventListener('submit', function(evento) {
-    //impedir a pagina de recarregar
     evento.preventDefault();
 
-    //Pegando do form e pondo em variaveis
 const id = document.getElementById('idLivro').value;
 const titulo = document.getElementById('tituloLivro').value;
 const autor = document.getElementById('autorLivro').value;
@@ -39,7 +23,6 @@ const genero = document.getElementById('generoLivro').value;
 const preco = document.getElementById('precoLivro').value;
 const quantidade = document.getElementById('quantidadeLivro').value;
 
-// Criar novo obj java script com os dados do formulario que estavam nas variaveis
   const novoLivro = {
     Id: Number(id),
     Titulo: titulo,
