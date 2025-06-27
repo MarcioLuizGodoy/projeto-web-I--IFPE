@@ -1,17 +1,12 @@
 ajustar arquivos js
 
+oks - 
 
-
-
-oks - editar livros
+editar livros
 buscar livros
 lista livros
-
-
-nao oks - 
-removerlivros
+adicionar livros
 
 
 fazendo - 
-
-adicionar livros
+remover livros

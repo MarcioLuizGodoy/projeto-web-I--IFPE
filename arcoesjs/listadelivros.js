@@ -17,9 +17,7 @@ function carregarLivros(){
         .then(converterResposta) 
         .then(receberObj)
 
-            
-         
-
+        
         //chamando metodo importante
         .then(listarLivros);
         
