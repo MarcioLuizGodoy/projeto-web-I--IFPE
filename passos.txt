@@ -1,4 +1,4 @@
-ajustar arquivos js
+====ajustar arquivos js====
 
 oks - 
 
@@ -7,6 +7,3 @@ buscar livros
 lista livros
 adicionar livros
 
-
-fazendo - 
-remover livros
