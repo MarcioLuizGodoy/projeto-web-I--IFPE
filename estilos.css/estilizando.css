@@ -212,3 +212,15 @@ aqui pra baixo começa adicionar livros*/
 .adicionarLivros button:hover {
   background-color: #4b5e72;
 }
+
+
+.tabela-livros {
+  border-collapse: collapse; /* Faz as bordas ficarem juntas, sem espaço */
+  width: 100%;
+}
+.tabela-livros th, 
+.tabela-livros td {
+  border: 1px solid black; /* Borda preta em cada célula */
+  padding: 6px 10px;
+  text-align: left;
+}

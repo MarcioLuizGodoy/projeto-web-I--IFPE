@@ -23,66 +23,46 @@ function carregarLivros(){
         
 }
 
-const elementoUl = document.getElementById('idlistadelivrosjs');
+const elementoTbody = document.getElementById('idtabeladelivrosjs');
 
 
-function listarLivros(){
-    elementoUl.innerHTML = '';
-     for(let i = 0 ; i< livros.length; i++){
-            const livro = livros[i];
-            const li = document.createElement('li');
-            li.textContent = li.textContent = `ID: ${livro.Id} | Título: ${livro.Titulo} | Autor: ${livro.Autor}`;
-            elementoUl.appendChild(li);
+function listarLivros() {
+    const tbody = document.getElementById('idtabeladelivrosjs');
+    tbody.innerHTML = '';
 
-        }
-          
+    for (let i = 0; i < livros.length; i++) {
+        const livro = livros[i];
 
-}
-carregarLivros()
+        const tr = document.createElement('tr');
 
+        const tdId = document.createElement('td');
+        tdId.textContent = livro.Id;
 
-           /*
-           PODE SER FEITO ASSIM TBEM:
+        const tdTitulo = document.createElement('td');
+        tdTitulo.textContent = livro.Titulo;
 
+        const tdAutor = document.createElement('td');
+        tdAutor.textContent = livro.Autor;
 
-let livros = [];
+        const tdGenero = document.createElement('td');
+        tdGenero.textContent = livro.Genero || '---';
 
-function converterResposta(resposta) {
-    if(resposta.ok == true) {
-        return resposta.json();
+        const tdPreco = document.createElement('td');
+        tdPreco.textContent = livro.Preco || '---';
+
+        const tdQuantidade = document.createElement('td');
+        tdQuantidade.textContent = livro.Quantidade || '---';
+
+        tr.appendChild(tdId);
+        tr.appendChild(tdTitulo);
+        tr.appendChild(tdAutor);
+        tr.appendChild(tdGenero);
+        tr.appendChild(tdPreco);
+        tr.appendChild(tdQuantidade);
+
+        tbody.appendChild(tr);
     }
 }
 
-function receberObj(objRespostaEmJs){
-    livros = objRespostaEmJs;
 
-}
-
-function carregarLivros(){
-     return fetch('livros.json')
-        .then(converterResposta) 
-        .then(receberObj);
-        
-}
-
-const elementoUl = document.getElementById('idlistadelivrosjs');
-
-
-function listarLivros(){
-    elementoUl.innerHTML = '';
-     for(let i = 0 ; i< livros.length; i++){
-            const livro = livros[i];
-            const li = document.createElement('li');
-            li.textContent = li.textContent = `ID: ${livro.Id} | Título: ${livro.Titulo} | Autor: ${livro.Autor}`;
-            elementoUl.appendChild(li);
-
-        }
-          
-
-}
-
-carregarLivros().then(listarLivros);
-
-*/
-                   
-                
+carregarLivros()
