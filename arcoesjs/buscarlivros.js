@@ -16,15 +16,44 @@ function carregarLivros(){
         .then( converterResposta).then(receberObjJs);
 }
 
-function mostrarLivros (listaLivro)   {
-    const ul = document.getElementById('buscarLivrosjs');
-        ul.innerHTML = '';
-        for(let i=0; i <listaLivro.length ;i ++ ) {
-            const  livro = listaLivro[i];
-                const li = document.createElement('li');
-                    li.textContent = 'ID: ' + livro.Id + ' | Título: ' + livro.Titulo + ' | Autor: ' + livro.Autor;
-                        ul.appendChild(li);
-        }
+function mostrarLivros(listaLivro) {
+    const tbody = document.getElementById('buscarLivrosjs');
+    tbody.innerHTML = ''; // Limpa antes de adicionar
+
+    for (let i = 0; i < listaLivro.length; i++) {
+        const livro = listaLivro[i];
+
+        const tr = document.createElement('tr');
+
+        const tdId = document.createElement('td');
+        tdId.textContent = livro.Id;
+
+        const tdTitulo = document.createElement('td');
+        tdTitulo.textContent = livro.Titulo;
+
+        const tdAutor = document.createElement('td');
+        tdAutor.textContent = livro.Autor;
+
+        const tdGenero =document.createElement('td');
+        tdGenero.textContent = livro.Genero;
+
+        const tdPreco = document.createElement('td');
+        tdPreco.textContent = livro.Preco;
+
+        const tdQuantidade = document.createElement('td');
+        tdQuantidade.textContent = livro.Quantidade;
+
+        tr.appendChild(tdId);
+        tr.appendChild(tdTitulo);
+        tr.appendChild(tdAutor);
+        tr.appendChild(tdGenero);
+        tr.appendChild(tdPreco);
+        tr.appendChild(tdQuantidade);
+
+
+
+        tbody.appendChild(tr);
+    }
 }
 
 //function receberEvento(evento){
