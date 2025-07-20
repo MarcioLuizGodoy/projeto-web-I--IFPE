@@ -224,3 +224,10 @@ aqui pra baixo começa adicionar livros*/
   padding: 6px 10px;
   text-align: left;
 }
+
+
+.centralizar {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+}

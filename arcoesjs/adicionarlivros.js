@@ -40,16 +40,43 @@ const quantidade = document.getElementById('quantidadeLivro').value;
 
 }
 
-function mostrarLivro(){
-    const ul = document.getElementById('atualizarLivros');
-    ul.innerHTML = '';
+function mostrarLivro() {
+    const tbody = document.getElementById('atualizarLivros');
+    tbody.innerHTML = ''; // Limpa o conteúdo da tabela
 
-    for( let i = 0; i<arrayObjetoConvertido.length; i ++){
-        const objLivro = arrayObjetoConvertido[i];
-        const li = document.createElement('li');
-        li.textContent =  `ID: ${objLivro.Id} | Título: ${objLivro.Titulo} | Autor: ${objLivro.Autor}| Genero: ${objLivro.Genero} | Preco: ${objLivro.Preco} | Quantidade: ${objLivro.Quantidade}`;
-        ul.appendChild(li);
-        }
+    for (let i = 0; i < arrayObjetoConvertido.length; i++) {
+        const livro = arrayObjetoConvertido[i];
+
+        const tr = document.createElement('tr');
+
+        const tdId = document.createElement('td');
+        tdId.textContent = livro.Id;
+
+        const tdTitulo = document.createElement('td');
+        tdTitulo.textContent = livro.Titulo;
+
+        const tdAutor = document.createElement('td');
+        tdAutor.textContent = livro.Autor;
+
+        const tdGenero = document.createElement('td');
+        tdGenero.textContent = livro.Genero || '---';
+
+        const tdPreco = document.createElement('td');
+        tdPreco.textContent = livro.Preco || '---';
+
+        const tdQuantidade = document.createElement('td');
+        tdQuantidade.textContent = livro.Quantidade || '---';
+
+        tr.appendChild(tdId);
+        tr.appendChild(tdTitulo);
+        tr.appendChild(tdAutor);
+        tr.appendChild(tdGenero);
+        tr.appendChild(tdPreco);
+        tr.appendChild(tdQuantidade);
+
+        tbody.appendChild(tr);
+    }
 }
+
 
 carregarLivros();
