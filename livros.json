@@ -3,5 +3,8 @@
   { "Id": 2, "Titulo": "1984", "Autor": "Eric Arthur Blair","Genero":"Distopia",  "Preco" :90.00,"Quantidade":2},
   { "Id": 3, "Titulo": "Como ler livros", "Autor": "Mortimer Adler","Genero": "Literatura", "Preco":90.00 ,"Quantidade":3},
   { "Id": 4, "Titulo": "Análise Técnica explicada","Autor":"Martin J.Pring", "Genero":"Mercado Financeiro","Preco":100.00,"Quantidade":4},
-  { "Id": 5, "Titulo": "Além das 12 regras para a vida", "Autor":"Jordan Peterson","Genero":"Psicologia","Preco": 100.00 ,"Quantidade":5}
+  { "Id": 5, "Titulo": "Além das 12 regras para a vida", "Autor":"Jordan Peterson","Genero":"Psicologia","Preco": 100.00 ,"Quantidade":5},
+  { "Id": 6, "Titulo": " A FORÇA DA RESILIENCIA", "Autor":"FRED ESTEVES","Genero":"Psicologia","Preco": 50.00 ,"Quantidade":1}
+
 ]
+

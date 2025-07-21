@@ -42,16 +42,45 @@ function editarLivroPorId(event){
 
 
 
-function mostrarLivros(){
+function mostrarLivros() {
+    const tbody = document.getElementById('idtabeladelivrosjs');
+    tbody.innerHTML = ''; // Limpa a tabela antes de inserir os dados atualizados
 
-    const ul = document.getElementById('inserirLivrosJS');
-        ul.innerHTML = '';
-    for( let i =0; i<objetoJavaScript.length; i ++){
-    const li = document.createElement('li');
-    li.textContent = `Id: ${objetoJavaScript[i].Id}| Título:${objetoJavaScript[i].Titulo} | Autor: ${objetoJavaScript[i].Autor}| Genero:${objetoJavaScript[i].Genero}| Preco: ${objetoJavaScript[i].Preco}| Quantidade: ${objetoJavaScript[i].Quantidade} ` ;
-    ul.appendChild(li);
+    for (let i = 0; i < objetoJavaScript.length; i++) {
+        const livro = objetoJavaScript[i];
+        const tr = document.createElement('tr');
+
+        const tdId = document.createElement('td');
+        tdId.textContent = livro.Id;
+
+        const tdTitulo = document.createElement('td');
+        tdTitulo.textContent = livro.Titulo;
+
+        const tdAutor = document.createElement('td');
+        tdAutor.textContent = livro.Autor;
+
+        const tdGenero = document.createElement('td');
+        tdGenero.textContent = livro.Genero;
+
+        const tdPreco = document.createElement('td');
+        tdPreco.textContent = livro.Preco;
+
+        const tdQuantidade = document.createElement('td');
+        tdQuantidade.textContent = livro.Quantidade;
+
+        // Adiciona as células à linha
+        tr.appendChild(tdId);
+        tr.appendChild(tdTitulo);
+        tr.appendChild(tdAutor);
+        tr.appendChild(tdGenero);
+        tr.appendChild(tdPreco);
+        tr.appendChild(tdQuantidade);
+
+        // Adiciona a linha à tabela
+        tbody.appendChild(tr);
     }
 }
+
 
 
 

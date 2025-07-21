@@ -38,9 +38,7 @@
 
 <fieldset class="adicionarLivros">
 
-    <legend>
-    Edite seu livro
-    </legend>
+    <legend>EDITE SEU LIVRO AQUI    </legend>
     <form action="" id="editarlivrosJS" >
         <label for="idLivro">Id: </label>
         <input type="text" id="idLivro" name="idLivro" >
@@ -68,9 +66,21 @@
 </fieldset>
 
 <div>
-<p><strong>Livros Atualizados</strong></p>
-
-    <ul id=inserirLivrosJS></ul>
+ <table class="tabela-livros">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Genero</th>
+                    <th>Preco</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody id="idtabeladelivrosjs">
+                   <!-- Linhas de livros aqui -->
+            </tbody>
+        </table>
 
 </div>
 <script src="arcoesjs/editarlivros.js" ></script>

@@ -31,7 +31,7 @@
 
     <fieldset class="adicionarLivros" >
 
-    <legend>Aqui você remove o livro. Tem certeza?</legend>
+    <legend>AQUI VOCÊ REMOVE O LIVRO. TEM CERTEZA?</legend>
 
     <form action="" method="post" id="idremoverlivrosjs">
             
@@ -44,7 +44,18 @@
             <button type="submit"> Remover este Livro</button>
     </form>
     </fieldset>
-    <ul id="listaLivrosRemoverJS"></ul>
+   <table class="tabela-livros">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Título</th>
+      <th>Autor</th>
+    </tr>
+  </thead>
+  <tbody id="listaLivrosRemoverJS">
+  </tbody>
+</table>
+
     
     <div id="mensagemRemocao" style="color: green; font-weight: bold; margin-top: 10px";></div>
     <script src="arcoesjs/removerlivro.js"></script>

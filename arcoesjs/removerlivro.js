@@ -16,16 +16,31 @@ function carregarLivros() {
     .then (atualizarListaNaTela);
   }
 
-function atualizarListaNaTela (lista) {
-  const ul = document.getElementById('listaLivrosRemoverJS');
-  ul.innerHTML =  ''; 
-  for( let i =0; i< lista.length; i ++) {
-  let livro = lista[i];
-  const li = document.createElement('li');
-  li.textContent = `ID: ${livro.Id} | Título: ${livro.Titulo} | Autor: ${livro.Autor}`;
-  ul.appendChild(li);
+function atualizarListaNaTela(lista) {
+  const tbody = document.getElementById('listaLivrosRemoverJS');
+  tbody.innerHTML = ''; // limpa
+
+  for (let i = 0; i < lista.length; i++) {
+    let livro = lista[i];
+
+    const tr = document.createElement('tr');
+
+    const tdId = document.createElement('td');
+    tdId.textContent = livro.Id;
+
+    const tdTitulo = document.createElement('td');
+    tdTitulo.textContent = livro.Titulo;
+
+    const tdAutor = document.createElement('td');
+    tdAutor.textContent = livro.Autor;
+
+    tr.appendChild(tdId);
+    tr.appendChild(tdTitulo);
+    tr.appendChild(tdAutor);
+
+    tbody.appendChild(tr);
   }
- }
+}
 
 const form = document.getElementById('idremoverlivrosjs');
 form.addEventListener('submit',removerLivro);
